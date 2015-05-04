@@ -1,6 +1,5 @@
 <?php
 	require __DIR__ . '/SourceQuery/SourceQuery.class.php';
-	require_once(__DIR__ . '/libraries/TeamSpeak3/TeamSpeak3.php');
 	// For the sake of this example
 	//Header( 'Content-Type: text/plain' );
 	Header( 'X-Content-Type-Options: nosniff' );
