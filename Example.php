@@ -26,8 +26,8 @@
 		echo '<pre>';
 		print_r( $Query->GetInfo( ) );
 		echo $Query->GetInfo()['Players'];
-		//print_r( $Query->GetPlayers( ) );
-		//print_r( $Query->GetRules( ) );
+		print_r( $Query->GetPlayers( ) );
+		print_r( $Query->GetRules( ) );
 		echo '</pre>';
 	}
 	catch( Exception $e )
@@ -37,8 +37,6 @@
 	
 	$Query->Disconnect( );
 
-	//$ts_ip = "ts.zero-one.cc"; // Change to your server's IP external or domain name
-	//$ts_ip = "udp://ts.zero-one.cc"; // Change to your server's IP external or domain name
 	$ts_ip = "ts.zero-one.cc"; // Change to your server's IP external or domain name
 	$ts_port = "10011"; // Make sure this port is open on the router or firewall
 
