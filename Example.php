@@ -8,7 +8,7 @@
 	define( 'SQ_SERVER_ADDR', '37.187.170.178' ); //zero one
 	//define( 'SQ_SERVER_ADDR', '31.186.251.213' );
 	/*
-	GEHT:
+	working IP's:
 	81.88.208.198	75 Spieler
 	85.159.42.196	78
 	31.186.251.213	74
