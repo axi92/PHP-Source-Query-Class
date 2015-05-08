@@ -1,4 +1,5 @@
 <?php
+$domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
 /**
 *
 * @package Steam Community API
@@ -84,9 +85,18 @@
 			return preg_match("#is_valid\s*:\s*true#i", $result) == 1 ? $steamID64 : '';
 		}
 	}
-	if (isset($_GET['openid_assoc_handle']) && !empty($_GET['openid_assoc_handle']))
-	{
-		echo SteamSignIn::validate();
-	}
+if (isset($_GET['openid_assoc_handle']) && !empty($_GET['openid_assoc_handle']))
+{
+	$steamid64 = SteamSignIn::validate();
+	//setcookie("steamid64", $steamid64, time()+3600, "/", $domain);
+	setcookie("steamid64", $steamid64, time()+3600);
+}
+echo 'Cookie Steamid64: ' . $_COOKIE['steamid64'];
 ?>
+<br>
 <a href="<?php echo SteamSignIn::genUrl() ?>"><img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_small.png" alt="Sign in through Steam" /></a>
+<br>
+Version 9
+<?php
+	
+?>
