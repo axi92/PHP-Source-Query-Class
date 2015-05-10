@@ -2,8 +2,8 @@
 	require __DIR__ . '/SourceQuery/SourceQuery.class.php';
 	
 	// Edit this ->
-	define( 'SQ_SERVER_ADDR', 'localhost' );
-	define( 'SQ_SERVER_PORT', 27015 );
+	define( 'SQ_SERVER_ADDR', '37.187.170.178' ); //zero one
+	define( 'SQ_SERVER_PORT', 2303 );
 	define( 'SQ_TIMEOUT',     3 );
 	define( 'SQ_ENGINE',      SourceQuery :: SOURCE );
 	// Edit this <-
